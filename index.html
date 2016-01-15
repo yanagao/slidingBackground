@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>index</title>
+	<style>
+		html, body{
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        #dom {
+            height: 100%;
+            width: auto;
+        }
+
+        .article:nth-child(1) {
+            background-color: black;
+        }
+
+        .article:nth-child(2) {
+            background-color: white;
+        }
+
+        .article:nth-child(3) {
+            background-color: green;
+        }
+
+        .article:nth-child(4) {
+            background-color: red;
+        }
+
+        .article:nth-child(5) {
+            background-color: white;
+        }
+
+        .article:nth-child(6) {
+            background-color: black;
+        }
+	</style>
+
+</head>
+<body>
+	<div id="dom">
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+        <div class="article"></div>
+    </div>
+	<script src="touch.js"></script>
+    <script src="swipe.js"></script>
+    <script>
+
+        var opt = {
+            wrapper: document.getElementById('dom'),
+        };
+        
+        bgTouch.init(opt);
+        bgTouch.register('bgSwipe');
+
+        
+    </script>
+</body>
+</html>
