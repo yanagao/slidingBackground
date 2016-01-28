@@ -1,4 +1,4 @@
-var bgSwipe = {
+var slideBackground = {
     touchEndDistance: 0,
     init: function() {
         var self = this;
@@ -32,7 +32,6 @@ var bgSwipe = {
 
         if (cf.currentNode === 0 && cf.currentDelta >= baseLength && cf.direction === -1) {
             cf.currentDelta = baseLength;
-            
         } else if (cf.currentNode === cf.childrenLength - 1 && cf.currentDelta <=  baseLength  && cf.direction === 1) {
             cf.currentDelta =  baseLength;
         }
@@ -63,7 +62,7 @@ var bgSwipe = {
         $.css(option.wrapper,
         {
             'transform': transform,
-            'transition': '0.5s'
+            'transition': '0.1s'
         });
         cf.touchEndDistance = 0;
     }

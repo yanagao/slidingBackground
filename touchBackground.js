@@ -1,4 +1,4 @@
-var bgTouchUtils = (function(){
+var touchBackgroundUtils = (function(){
 
     var utils = {};
     try {
@@ -28,9 +28,10 @@ var bgTouchUtils = (function(){
     return utils;
 }());
 
-var bgTouch = (function($win, $) {
+var touchBackground = (function($win, $) {
     var opt = {
-        wrapper: $win.document.body
+        wrapper: $win.document.body,
+        // animation: animation
     };
 
     var config = {
@@ -76,8 +77,8 @@ var bgTouch = (function($win, $) {
 
     var eventHandler = function(obj) {
         var custVar = {
-            startPos: null,     
-            movePos: null,        
+            startPos: null,
+            movePos: null,
             distance: 0
         };
         $.on(opt.wrapper, 'touchstart', function(ev) {
@@ -91,7 +92,7 @@ var bgTouch = (function($win, $) {
             custVar.distance = custVar.movePos.pageY - custVar.startPos.pageY;
             // console.log(custVar.startPos.pageY + 'hhhhhhhhhhhhhhhh' + custVar.movePos.pageY);
 
-            getDirection(custVar.distance);   
+            getDirection(custVar.distance);
             config.currentDelta += custVar.distance;
             obj.ontouchmove && obj.ontouchmove(ev, custVar);
             custVar.startPos = custVar.movePos;
@@ -103,12 +104,12 @@ var bgTouch = (function($win, $) {
         });
     };
 
-    var bgTouch = {
+    var touchBackground = {
         opt: opt,
         init: init,
         register: register
     };
 
-    return bgTouch;
+    return touchBackground;
 // });
-}(window, bgTouchUtils));
+}(window, touchBackgroundUtils));

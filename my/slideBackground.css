@@ -1,0 +1,34 @@
+.slideBackground .slideBackground-wrap {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slideBackground .page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 700ms ease;
+    -webkit-transition: all 700ms ease;
+    /*transition: all 300ms ease-in-out;
+    -webkit-transition: all 300ms ease-in-out;*/
+    background-position: center;
+}
+/*.slideBackground .page:not(:first-child ) {
+    transform: translate3d(0,100%,0);
+    -webkit-transform: translate3d(0,100%,0);
+}
+*/
+/*.slideBackground .no-animation {
+    transition: none;
+    -webkit-transition: none;
+}*/
+.slideBackground .hide {
+    display: none;
+}
+.slideBackground .zindex {
+    z-index: 99;
+}

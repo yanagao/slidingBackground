@@ -18,27 +18,27 @@
             width: auto;
         }
 
-        .article:nth-child(1) {
+        .content:nth-child(1) {
             background-color: black;
         }
 
-        .article:nth-child(2) {
+        .content:nth-child(2) {
             background-color: white;
         }
 
-        .article:nth-child(3) {
+        .content:nth-child(3) {
             background-color: green;
         }
 
-        .article:nth-child(4) {
+        .content:nth-child(4) {
             background-color: red;
         }
 
-        .article:nth-child(5) {
+        .content:nth-child(5) {
             background-color: white;
         }
 
-        .article:nth-child(6) {
+        .content:nth-child(6) {
             background-color: black;
         }
 	</style>
@@ -46,23 +46,24 @@
 </head>
 <body>
 	<div id="dom">
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
-        <div class="article"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
+        <div class="content"></div>
     </div>
-	<script src="touch.js"></script>
-    <script src="swipe.js"></script>
+	<script src="touchBackground.js"></script>
+    <script src="slideBackground.js"></script>
     <script>
 
         var opt = {
             wrapper: document.getElementById('dom'),
+            animation: normal
         };
         
-        bgTouch.init(opt);
-        bgTouch.register('bgSwipe');
+        touchBackground.init(opt);
+        touchBackground.register('slideBackground');
 
         
     </script>
