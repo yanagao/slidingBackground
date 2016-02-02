@@ -13,22 +13,35 @@
     overflow: hidden;
     transition: all 700ms ease;
     -webkit-transition: all 700ms ease;
-    /*transition: all 300ms ease-in-out;
-    -webkit-transition: all 300ms ease-in-out;*/
     background-position: center;
 }
-/*.slideBackground .page:not(:first-child ) {
+.slideBackground .page:not(:first-child ) {
     transform: translate3d(0,100%,0);
     -webkit-transform: translate3d(0,100%,0);
 }
-*/
-/*.slideBackground .no-animation {
-    transition: none;
-    -webkit-transition: none;
-}*/
 .slideBackground .hide {
     display: none;
 }
 .slideBackground .zindex {
     z-index: 99;
+}
+@keyframes fadeInUp{
+    0%{
+        opacity:0;
+        transform:translateY(-20px);
+    }
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+@-webkit-keyframes fadeInUp{
+    0%{
+        opacity:0;
+        -webkit-transform:translateY(-20px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0px);
+    }
 }
