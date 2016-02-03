@@ -1,4 +1,4 @@
-(function() {
+;(function($) {
     var opt = {
         type: 1
     };
@@ -165,4 +165,4 @@
 
     }
 
-})();
+})(Zepto);
